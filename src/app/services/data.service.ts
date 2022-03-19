@@ -1,0 +1,28 @@
+import { taskFrequency, ITask, tasks } from '../models/data.model';
+import * as _ from 'lodash';
+
+export class DataService {
+  
+    private _tasks: ITask[];
+
+    constructor() {
+        this._tasks = _.cloneDeep(tasks);
+        this._tasks.forEach(task => {
+            if (task.frequency === taskFrequency.day) {
+                task.currentPeriod.start = new Date();
+                task.currentPeriod.end = new Date();
+            }
+
+            if (task.frequency === taskFrequency.week) {
+                task.currentPeriod.start = new Date(2022, 2, 14);
+                task.currentPeriod.end = new Date(2022, 2, 20);
+            }
+        })
+        console.log('this._tasks', this._tasks);
+    }
+      
+    public getTasks(): ITask[] {
+        return this._tasks;
+    }
+
+}
