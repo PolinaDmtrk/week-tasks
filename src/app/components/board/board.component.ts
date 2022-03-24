@@ -9,17 +9,22 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class BoardComponent implements OnInit {
 
-  public allTasks: ITask[];
-  public dayTasks: ITask[];
-  public weekTasks: ITask[];
+  public allTasks: ITask[] = [];
+  public dayTasks: ITask[] = [];
+  public weekTasks: ITask[] = [];
 
   constructor(private dataService: DataService) {
-    this.allTasks = this.dataService.getTasks();
-    this.dayTasks = this.allTasks.filter(task => task.frequency === taskFrequency.day);
-    this.weekTasks = this.allTasks.filter(task => task.frequency === taskFrequency.week);
+    
   }
 
   ngOnInit(): void {
+    this.initBoard();
+  }
+
+  initBoard() {
+    this.allTasks = this.dataService.getTasks();
+    this.dayTasks = this.allTasks.filter(task => task.frequency === taskFrequency.day);
+    this.weekTasks = this.allTasks.filter(task => task.frequency === taskFrequency.week);
   }
 
 }

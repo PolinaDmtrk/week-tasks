@@ -38,7 +38,7 @@ export class Task {
 
 export const tasks: ITask[] = [
     {
-        id: 0,
+        id: 1,
         task: 'сделать ежедневное дело 1',
         date: null,
         frequency: taskFrequency.day,
@@ -49,19 +49,8 @@ export const tasks: ITask[] = [
         }
     },
     {
-        id: 1,
-        task: 'сделать ежедневное дело 2 с очень длинным описанием для того чтобы корректно проставить стили для блока с отдельной задачей',
-        date: null,
-        frequency: taskFrequency.day,
-        complete: true,
-        currentPeriod: {
-            start: null,
-            end: null
-        }
-    },
-    {
         id: 2,
-        task: 'сделать ежедневное дело 3',
+        task: 'сделать ежедневное дело 2 с очень длинным описанием для того чтобы корректно проставить стили для блока с отдельной задачей',
         date: null,
         frequency: taskFrequency.day,
         complete: false,
@@ -72,10 +61,10 @@ export const tasks: ITask[] = [
     },
     {
         id: 3,
-        task: 'сделать еженедельное дело 1',
+        task: 'сделать ежедневное дело 3',
         date: null,
-        frequency: taskFrequency.week,
-        complete: true,
+        frequency: taskFrequency.day,
+        complete: false,
         currentPeriod: {
             start: null,
             end: null
@@ -83,7 +72,117 @@ export const tasks: ITask[] = [
     },
     {
         id: 4,
+        task: 'сделать ежедневное дело 4',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 5,
+        task: 'сделать ежедневное дело 5',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 6,
+        task: 'сделать ежедневное дело 6',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 7,
+        task: 'сделать ежедневное дело 7',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 8,
+        task: 'сделать ежедневное дело 8',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 9,
+        task: 'сделать ежедневное дело 9',
+        date: null,
+        frequency: taskFrequency.day,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 111,
+        task: 'сделать еженедельное дело 1',
+        date: null,
+        frequency: taskFrequency.week,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 112,
         task: 'сделать еженедельное дело 2',
+        date: null,
+        frequency: taskFrequency.week,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 113,
+        task: 'сделать еженедельное дело 3',
+        date: null,
+        frequency: taskFrequency.week,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 114,
+        task: 'сделать еженедельное дело 4',
+        date: null,
+        frequency: taskFrequency.week,
+        complete: false,
+        currentPeriod: {
+            start: null,
+            end: null
+        }
+    },
+    {
+        id: 115,
+        task: 'сделать еженедельное дело 5',
         date: null,
         frequency: taskFrequency.week,
         complete: false,

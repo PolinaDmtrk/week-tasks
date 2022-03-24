@@ -1,5 +1,5 @@
 <div class="tasks-block">
     <ng-container *ngFor="let task of uncompletedTasks">
-        <app-task [task]="task"></app-task>
+        <app-task *ngIf="!task.complete" [task]="task" (taskCompleted)="completeTask(task.id)"></app-task>
     </ng-container>
 </div>

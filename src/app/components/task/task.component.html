@@ -1,4 +1,4 @@
 <div class="task">
-    <input [id]="task.id" type="checkbox"/>
+    <p-checkbox [(ngModel)]="test" [binary]="true" inputId="{{task.id}}" (onChange)="completeTask(task.id)"></p-checkbox>
     <label [for]="task.id">{{ task.task }}</label>
 </div>

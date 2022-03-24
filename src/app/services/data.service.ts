@@ -25,4 +25,15 @@ export class DataService {
         return this._tasks;
     }
 
+    public completeTask(taskId: number | undefined): void {
+        const id = this._tasks.findIndex(task => task.id === taskId);
+
+        if (id === -1) {
+            alert('Задача не найдена :(');
+            return;
+        }
+
+        this._tasks[id].complete = true;
+    }
+
 }
