@@ -1,5 +1,7 @@
 <div class="board">
     <!-- <app-tasks-block [tasks]="allTasks"></app-tasks-block> -->
-    <app-tasks-block [tasks]="dayTasks" (taskCompleted)="initBoard()"></app-tasks-block>
-    <app-tasks-block [tasks]="weekTasks" (taskCompleted)="initBoard()"></app-tasks-block>
+    <app-tasks-block [options]="dayOptions" [tasks]="dayTasks"></app-tasks-block>
+    <ng-container *ngFor="let day of week">
+        <app-tasks-block [options]="day" [tasks]="getWeekDayTasks(day.date)"></app-tasks-block>
+    </ng-container>
 </div>

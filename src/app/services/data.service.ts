@@ -3,9 +3,13 @@ import * as _ from 'lodash';
 
 export class DataService {
   
-    private _tasks: ITask[];
+    private _tasks: ITask[] = [];
 
     constructor() {
+        this.getMockData();
+    }
+
+    private getMockData(): void {
         this._tasks = _.cloneDeep(tasks);
         this._tasks.forEach(task => {
             if (task.frequency === taskFrequency.day) {
@@ -14,8 +18,8 @@ export class DataService {
             }
 
             if (task.frequency === taskFrequency.week) {
-                task.currentPeriod.start = new Date(2022, 2, 14);
-                task.currentPeriod.end = new Date(2022, 2, 20);
+                task.currentPeriod.start = new Date(2022, 2, 21);
+                task.currentPeriod.end = new Date(2022, 2, 27);
             }
         })
         console.log('this._tasks', this._tasks);

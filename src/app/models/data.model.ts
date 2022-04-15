@@ -1,18 +1,26 @@
+import { WeekDay } from '@angular/common';
+
 export enum taskFrequency {
     day = 'day',
     week = 'week'
 }
 
 export interface ITask {
-    id: number | undefined,
-    task: string | undefined,
-    date: Date | null | undefined,
-    frequency: taskFrequency | undefined,
-    complete: boolean | undefined,
+    id: number | undefined;
+    task: string | undefined;
+    date: Date | null | undefined;
+    frequency: taskFrequency | undefined;
+    complete: boolean | undefined;
     currentPeriod: {
-        start: Date | null | undefined,
-        end: Date | null | undefined
-    }
+        start: Date | null | undefined;
+        end: Date | null | undefined;
+    };
+}
+
+export interface IWeekDay {
+    day: WeekDay;
+    title: string;
+    date: Date;
 }
 
 export class Task {
@@ -139,7 +147,7 @@ export const tasks: ITask[] = [
     {
         id: 111,
         task: 'сделать еженедельное дело 1',
-        date: null,
+        date: new Date(2022, 2, 21),
         frequency: taskFrequency.week,
         complete: false,
         currentPeriod: {
@@ -150,7 +158,7 @@ export const tasks: ITask[] = [
     {
         id: 112,
         task: 'сделать еженедельное дело 2',
-        date: null,
+        date: new Date(2022, 2, 21),
         frequency: taskFrequency.week,
         complete: false,
         currentPeriod: {
@@ -161,7 +169,7 @@ export const tasks: ITask[] = [
     {
         id: 113,
         task: 'сделать еженедельное дело 3',
-        date: null,
+        date: new Date(2022, 2, 22),
         frequency: taskFrequency.week,
         complete: false,
         currentPeriod: {
@@ -172,7 +180,7 @@ export const tasks: ITask[] = [
     {
         id: 114,
         task: 'сделать еженедельное дело 4',
-        date: null,
+        date: new Date(2022, 2, 22),
         frequency: taskFrequency.week,
         complete: false,
         currentPeriod: {
@@ -183,12 +191,50 @@ export const tasks: ITask[] = [
     {
         id: 115,
         task: 'сделать еженедельное дело 5',
-        date: null,
+        date: new Date(2022, 2, 24),
         frequency: taskFrequency.week,
         complete: false,
         currentPeriod: {
             start: null,
             end: null
         }
+    }
+]
+
+export const week: IWeekDay[] = [
+    {
+        day: WeekDay.Monday,
+        title: 'понедельник',
+        date: new Date(2022, 2, 21)
+    },
+    {
+        day: WeekDay.Tuesday,
+        title: 'вторник',
+        date: new Date(2022, 2, 22)
+    },
+    {
+        day: WeekDay.Wednesday,
+        title: 'среда',
+        date: new Date(2022, 2, 23)
+    },
+    {
+        day: WeekDay.Thursday,
+        title: 'четверг',
+        date: new Date(2022, 2, 24)
+    },
+    {
+        day: WeekDay.Friday,
+        title: 'пятница',
+        date: new Date(2022, 2, 25)
+    },
+    {
+        day: WeekDay.Saturday,
+        title: 'суббота',
+        date: new Date(2022, 2, 26)
+    },
+    {
+        day: WeekDay.Sunday,
+        title: 'воскресенье',
+        date: new Date(2022, 2, 27)
     }
 ]

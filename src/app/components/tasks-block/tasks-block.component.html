@@ -1,4 +1,8 @@
 <div class="tasks-block">
+    <div class="tasks-block__header">
+        <span class="tasks-block__title">{{ options.title }}</span>
+        <span>{{ options.date | date }}</span>
+    </div>
     <ng-container *ngFor="let task of uncompletedTasks">
         <app-task *ngIf="!task.complete" [task]="task" (taskCompleted)="completeTask(task.id)"></app-task>
     </ng-container>

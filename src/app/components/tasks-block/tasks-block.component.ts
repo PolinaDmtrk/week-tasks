@@ -10,6 +10,7 @@ import { DataService } from 'src/app/services/data.service';
 export class TasksBlockComponent implements OnInit, OnChanges {
 
   @Input() public tasks: ITask[] = [];
+  @Input() public options: any;
   @Output() public taskCompleted: EventEmitter<boolean> = new EventEmitter<boolean>();
   public uncompletedTasks: ITask[] = [];
 
@@ -29,7 +30,7 @@ export class TasksBlockComponent implements OnInit, OnChanges {
     }
 
     this.dataService.completeTask(id);
-    this.taskCompleted.emit(true);
+    // this.taskCompleted.emit(true);
   }
 
 }
